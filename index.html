@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SukhramToken — Gold Theme</title>
+<meta name="description" content="SukhramToken (SKM) — BEP-20 token on BNB Smart Chain. Gold theme, multilingual (EN/RU/AR).">
+<style>
+*{box-sizing:border-box}
+:root{
+  --bg:#14110f; --panel:#1d1813; --border:#3a2d1a;
+  --text:#fff9e6; --muted:#e6d9b8; --accent:#ffd24d; --accent2:#ffb300;
+  --shadow:0 6px 18px rgba(0,0,0,.35)
+}
+body{margin:0;background:linear-gradient(180deg,var(--bg),#0e0c0a);color:var(--text);
+font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif}
+.container{max-width:1120px;margin:0 auto;padding:0 20px}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0;position:sticky;top:0;
+background:rgba(20,17,15,.75);backdrop-filter:blur(10px);border-bottom:1px solid rgba(255,194,26,.15)}
+.brand{display:flex;align-items:center;gap:12px;color:var(--text);text-decoration:none;font-weight:800}
+.brand img{width:96px;height:96px;border-radius:16px;object-fit:cover;border:2px solid var(--accent);box-shadow:0 0 0 2px rgba(0,0,0,.25)}
+@media (max-width:640px){.brand img{width:64px;height:64px;border-radius:12px}}
+.brand span{font-size:22px}
+.langs{display:flex;gap:8px;flex-wrap:wrap}
+.langs button{border:1px solid rgba(255,194,26,.25);background:#17130f;color:var(--text);
+padding:7px 12px;border-radius:10px;cursor:pointer;box-shadow:var(--shadow)}
+.langs button.active{background:linear-gradient(90deg,var(--accent),var(--accent2));color:#2a1f00;border:none;font-weight:800}
+.hero{padding:32px 0}
+.lead{color:var(--muted)}
+.btn{display:inline-block;border:1px solid rgba(255,194,26,.25);padding:12px 16px;border-radius:12px;
+color:var(--text);text-decoration:none;margin:8px 10px 0 0;background:#17130f;box-shadow:var(--shadow)}
+.primary{background:linear-gradient(90deg,var(--accent),var(--accent2));color:#2a1f00;border:none;font-weight:800}
+.section{padding:32px 0}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+.card{background:linear-gradient(180deg,#1b1611,#17130f);border:1px solid rgba(255,194,26,.18);border-radius:14px;padding:18px;box-shadow:var(--shadow)}
+.card h3{margin-top:0}
+.contract-box{display:inline-block;background:#1a1510;border:1px solid rgba(255,194,26,.18);padding:12px 14px;border-radius:12px;word-break:break-all}
+.iframe-wrap{border:1px solid rgba(255,194,26,.18);border-radius:14px;overflow:hidden;background:#1a1510;margin-top:10px;box-shadow:var(--shadow)}
+.iframe-wrap iframe{width:100%;height:520px;border:0}
+.footer{padding:44px 0 80px;text-align:center;color:var(--muted)}
+.small{font-size:12px}
+.hidden{display:none}
+[dir="rtl"] .langs button{margin-left:0;margin-right:8px}
+</style>
+</head>
+<body>
+<header class="nav container">
+  <a class="brand" href="#top" aria-label="SukhramToken">
+    <!-- логотип: можно заменить ссылкой на изображение в GitHub, пока ставим круг -->
+    <img src="https://raw.githubusercontent.com/primer/design-tokens/main/apps/storybook/static/apple-touch-icon.png" alt="Logo">
+    <span>SukhramToken</span>
+  </a>
+  <div class="langs">
+    <button data-lang="en" class="active">EN</button>
+    <button data-lang="ru">RU</button>
+    <button data-lang="ar">AR</button>
+  </div>
+</header>
+
+<main id="top" class="container">
+<!-- EN -->
+<section class="lang lang-en">
+  <div class="hero">
+    <h1>SukhramToken <span class="lead">(SKM)</span></h1>
+    <p class="lead">BEP-20 token on BNB Smart Chain. Community-driven and transparent.</p>
+    <a class="btn primary" id="copy-en">Copy contract</a>
+    <a class="btn" href="https://bscscan.com/token/0xF9200177e2e789728F0b989975be8A080dD28fd5" target="_blank" rel="noopener">BscScan</a>
+    <a class="btn" href="https://pancakeswap.finance/swap?outputCurrency=0xF9200177e2e789728F0b989975be8A080dD28fd5" target="_blank" rel="noopener">PancakeSwap</a>
+    <a class="btn" href="https://t.me/SukhramTokenChat" target="_blank" rel="noopener">Telegram</a><br>
+    <code class="contract-box">0xF9200177e2e789728F0b989975be8A080dD28fd5</code>
+  </div>
+  <section class="section">
+    <h2>About</h2>
+    <p>SukhramToken (SKM) focuses on accessibility and low fees. Utilities and partnerships will be introduced step by step as the community grows.</p>
+  </section>
+  <section class="section">
+    <h2>Tokenomics</h2>
+    <div class="grid">
+      <div class="card"><h3>Total supply</h3><p><strong>Set later</strong></p></div>
+      <div class="card"><h3>Taxes</h3><p>Buy/Sell: <strong>0%</strong></p></div>
+      <div class="card"><h3>Liquidity</h3><p>Main pair: <strong>SKM/WBNB</strong><br>LP lock: <em>add link</em></p></div>
+    </div>
+  </section>
+  <section class="section">
+    <h2>Live chart</h2>
+    <div class="iframe-wrap"><iframe src="https://dexscreener.com/bsc/0xF9200177e2e789728F0b989975be8A080dD28fd5" title="DexScreener"></iframe></div>
+  </section>
+</section>
+
+<!-- RU -->
+<section class="lang lang-ru hidden">
+  <div class="hero">
+    <h1>SukhramToken <span class="lead">(SKM)</span></h1>
+    <p class="lead">BEP-20 токен в сети BNB Smart Chain. Прозрачность и фокус на сообщество.</p>
+    <a class="btn primary" id="copy-ru">Скопировать адрес контракта</a>
+    <a class="btn" href="https://bscscan.com/token/0xF9200177e2e789728F0b989975be8A080dD28fd5" target="_blank" rel="noopener">BscScan</a>
+    <a class="btn" href="https://pancakeswap.finance/swap?outputCurrency=0xF9200177e2e789728F0b989975be8A080dD28fd5" target="_blank" rel="noopener">PancakeSwap</a>
+    <a class="btn" href="https://t.me/SukhramTokenChat" target="_blank" rel="noopener">Telegram</a><br>
+    <code class="contract-box">0xF9200177e2e789728F0b989975be8A080dD28fd5</code>
+  </div>
+  <section class="section">
+    <h2>О проекте</h2>
+    <p>SukhramToken (SKM) — доступность и низкие комиссии. Утилити и партнёрства подключаются по мере роста комьюнити.</p>
+  </section>
+  <section class="section">
+    <h2>График</h2>
+    <div class="iframe-wrap"><iframe src="https://dexscreener.com/bsc/0xF9200177e2e789728F0b989975be8A080dD28fd5" title="DexScreener"></iframe></div>
+  </section>
+</section>
+
+<!-- AR -->
+<section class="lang lang-ar hidden" dir="rtl">
+  <div class="hero">
+    <h1>SukhramToken <span class="lead">(SKM)</span></h1>
+    <p class="lead">رمز BEP-20 على شبكة BNB مع تركيز على المجتمع وشفافية كاملة.</p>
+    <a class="btn primary" id="copy-ar">نسخ عنوان العقد</a>
+    <a class="btn" href="https://bscscan.com/token/0xF9200177e2e789728F0b989975be8A080dD28fd5" target="_blank" rel="noopener">BscScan</a>
+    <a class="btn" href="https://pancakeswap.finance/swap?outputCurrency=0xF9200177e2e789728F0b989975be8A080dD28fd5" target="_blank" rel="noopener">PancakeSwap</a>
+    <a class="btn" href="https://t.me/SukhramTokenChat" target="_blank" rel="noopener">Telegram</a><br>
+    <code class="contract-box">0xF9200177e2e789728F0b989975be8A080dD28fd5</code>
+  </div>
+  <section class="section">
+    <h2>حول المشروع</h2>
+    <p>SukhramToken (SKM) يركز على سهولة الاستخدام والرسوم المنخفضة. سيتم إطلاق الفوائد والشراكات تدريجياً مع نمو المجتمع.</p>
+  </section>
+  <section class="section">
+    <h2>الرسم البياني المباشر</h2>
+    <div class="iframe-wrap"><iframe src="https://dexscreener.com/bsc/0xF9200177e2e789728F0b989975be8A080dD28fd5" title="DexScreener"></iframe></div>
+  </section>
+</section>
+</main>
+
+<footer class="container footer">
+  <p>© <span id="year"></span> SukhramToken</p>
+</footer>
+
+<script>
+document.getElementById('year').textContent=new Date().getFullYear();
+const btns=document.querySelectorAll('.langs button');
+const sections=document.querySelectorAll('.lang');
+btns.forEach(b=>b.addEventListener('click',e=>{
+  btns.forEach(x=>x.classList.remove('active')); b.classList.add('active');
+  sections.forEach(s=>s.classList.add('hidden'));
+  document.querySelector('.lang-'+b.dataset.lang).classList.remove('hidden');
+  document.documentElement.dir=(b.dataset.lang==='ar')?'rtl':'ltr';
+}));
+function attach(id){
+  const el=document.getElementById(id);
+  if(el) el.onclick=()=>navigator.clipboard.writeText('0xF9200177e2e789728F0b989975be8A080dD28fd5')
+    .then(()=>alert('Copied! / Скопировано! / تم النسخ!'));
+}
+attach('copy-en'); attach('copy-ru'); attach('copy-ar');
+</script>
+</body>
+</html>
