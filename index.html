@@ -1,208 +1,83 @@
-<!doctype html>
-<html lang="ru">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>SukhramToken — Gold Theme</title>
-  <meta name="description" content="SukhramToken (SKM) — BEP-20 token on BNB Smart Chain. Gold theme, multilingual (EN/RU/AR).">
-  <meta name="theme-color" content="#FFD24D">
+<style>
+  /* ====== Светлая золотая тема ====== */
+  *{box-sizing:border-box}
+  :root{
+    --bg:#fff8dc;
+    --panel:#fff1b8;
+    --border:#e2c351;
+    --text:#2a1f00;
+    --muted:#6d5a2b;
+    --accent:#ffd24d;
+    --accent2:#ffb300;
+    --shadow:0 6px 18px rgba(0,0,0,.12);
+  }
 
-  <!-- ЭМБЛЕМА (favicon + iOS) -->
-  <link rel="icon" type="image/png" href="logo_sukhram_300.png">
-  <link rel="apple-touch-icon" href="logo_sukhram_300.png">
+  body{
+    margin:0;
+    background:linear-gradient(180deg,var(--bg),#fff3c9);
+    color:var(--text);
+    font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+  }
 
-  <style>
-    /* ====== Светлая золотая тема ====== */
-    *{box-sizing:border-box}
-    :root{
-      --bg:#fff8dc;
-      --panel:#fff1b8;
-      --border:#e2c351;
-      --text:#2a1f00;
-      --muted:#6d5a2b;
-      --accent:#ffd24d;
-      --accent2:#ffb300;
-      --shadow:0 6px 18px rgba(0,0,0,.12);
-    }
+  .container{max-width:1120px;margin:0 auto;padding:0 20px}
 
-    body{
-      margin:0;
-      background:linear-gradient(180deg,var(--bg),#fff3c9);
-      color:var(--text);
-      font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
-    }
+  .nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0;
+    position:sticky;top:0;background:rgba(255,236,179,.8);backdrop-filter:blur(8px);
+    border-bottom:1px solid var(--border);}
 
-    .container{max-width:1120px;margin:0 auto;padding:0 20px}
+  .brand{display:flex;align-items:center;gap:12px;text-decoration:none;font-weight:800;color:var(--text)}
+  .brand img{
+    width:56px;
+    height:56px;
+    border-radius:50%;
+    object-fit:cover;
+    border:2px solid var(--accent);
+    box-shadow:0 0 0 2px rgba(0,0,0,.06);
+    transform: scale(1.35);              /* 🔹 увеличивает монету внутри */
+    transform-origin: center;
+    clip-path: circle(50% at 50% 50%);
+  }
+  .brand span{font-size:22px}
 
-    .nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0;
-      position:sticky;top:0;background:rgba(255,236,179,.8);backdrop-filter:blur(8px);
-      border-bottom:1px solid var(--border);}
+  .langs{display:flex;gap:8px;flex-wrap:wrap}
+  .langs button{border:1px solid var(--border);background:#fff7cf;color:var(--text);
+    padding:7px 12px;border-radius:10px;cursor:pointer;box-shadow:var(--shadow)}
+  .langs button.active{background:linear-gradient(90deg,var(--accent),var(--accent2));color:#2a1f00;border:none;font-weight:800}
 
-    .brand{display:flex;align-items:center;gap:12px;text-decoration:none;font-weight:800;color:var(--text)}
-    .brand img{width:56px;height:56px;border-radius:50%;object-fit:cover;
-      border:2px solid var(--accent);box-shadow:0 0 0 2px rgba(0,0,0,.06)}
-    .brand span{font-size:22px}
+  .hero{padding:32px 0}
+  .lead{color:var(--muted)}
 
-    .langs{display:flex;gap:8px;flex-wrap:wrap}
-    .langs button{border:1px solid var(--border);background:#fff7cf;color:var(--text);
-      padding:7px 12px;border-radius:10px;cursor:pointer;box-shadow:var(--shadow)}
-    .langs button.active{background:linear-gradient(90deg,var(--accent),var(--accent2));color:#2a1f00;border:none;font-weight:800}
+  .btn{display:inline-block;border:1px solid var(--border);padding:12px 16px;border-radius:12px;
+    color:var(--text);text-decoration:none;margin:8px 10px 0 0;background:#fff7cf;box-shadow:var(--shadow)}
+  .primary{background:linear-gradient(90deg,var(--accent),var(--accent2));color:#2a1f00;border:none;font-weight:800}
 
-    .hero{padding:32px 0}
-    .lead{color:var(--muted)}
+  .section{padding:32px 0}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+  .card{background:linear-gradient(180deg,#fff3bf,#ffeaa3);border:1px solid var(--border);
+    border-radius:14px;padding:18px;box-shadow:var(--shadow)}
+  .card h3{margin-top:0}
 
-    .btn{display:inline-block;border:1px solid var(--border);padding:12px 16px;border-radius:12px;
-      color:var(--text);text-decoration:none;margin:8px 10px 0 0;background:#fff7cf;box-shadow:var(--shadow)}
-    .primary{background:linear-gradient(90deg,var(--accent),var(--accent2));color:#2a1f00;border:none;font-weight:800}
+  .contract-box{display:inline-block;background:#fff7cf;border:1px solid var(--border);
+    padding:12px 14px;border-radius:12px;word-break:break-all}
 
-    .section{padding:32px 0}
-    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
-    .card{background:linear-gradient(180deg,#fff3bf,#ffeaa3);border:1px solid var(--border);
-      border-radius:14px;padding:18px;box-shadow:var(--shadow)}
-    .card h3{margin-top:0}
+  .iframe-wrap{border:1px solid var(--border);border-radius:14px;overflow:hidden;background:#fff7cf;margin-top:10px;box-shadow:var(--shadow)}
+  .iframe-wrap iframe{width:100%;height:520px;border:0;background:#fff}
 
-    .contract-box{display:inline-block;background:#fff7cf;border:1px solid var(--border);
-      padding:12px 14px;border-radius:12px;word-break:break-all}
+  .footer{padding:44px 0 80px;text-align:center;color:var(--muted)}
+  .small{font-size:12px}
+  .hidden{display:none}
+  [dir="rtl"] .langs button{margin-left:0;margin-right:8px}
 
-    .iframe-wrap{border:1px solid var(--border);border-radius:14px;overflow:hidden;background:#fff7cf;margin-top:10px;box-shadow:var(--shadow)}
-    .iframe-wrap iframe{width:100%;height:520px;border:0;background:#fff}
-
-    .footer{padding:44px 0 80px;text-align:center;color:var(--muted)}
-    .small{font-size:12px}
-    .hidden{display:none}
-    [dir="rtl"] .langs button{margin-left:0;margin-right:8px}
-
-    /* блок эмблемы на главной */
-    .logo-center{display:flex;align-items:center;justify-content:center;gap:16px;margin:20px 0}
-    .logo-center img{width:120px;height:120px;border-radius:50%;border:2px solid var(--accent)}
-    .logo-center h1{margin:0;color:#7a5a00}
-  </style>
-</head>
-
-<body>
-  <!-- ШАПКА С НЕБОЛЬШИМ ЛОГО -->
-  <header class="nav container">
-    <a class="brand" href="#top" aria-label="SukhramToken">
-      <img src="logo_sukhram_300.png" alt="SukhramToken">
-      <span>SukhramToken</span>
-    </a>
-    <div class="langs">
-      <button data-lang="en" class="active">EN</button>
-      <button data-lang="ru">RU</button>
-      <button data-lang="ar">AR</button>
-    </div>
-  </header>
-
-  <!-- КРУПНАЯ ЭМБЛЕМА ВВЕРХУ СТРАНИЦЫ -->
-  <div class="logo-center container">
-    <img src="logo_sukhram_300.png" alt="SukhramToken Logo">
-    <h1>SukhramToken (SKM)</h1>
-  </div>
-
-  <main id="top" class="container">
-    <!-- EN -->
-    <section class="lang lang-en">
-      <div class="hero">
-        <h2>SukhramToken <span class="lead">(SKM)</span></h2>
-        <p class="lead">BEP-20 token on BNB Smart Chain. Community-driven and transparent.</p>
-        <a class="btn primary" id="copy-en">Copy contract</a>
-        <a class="btn" href="https://bscscan.com/token/0xF9200177e2e789728F0b989975be8A080dD28fd5" target="_blank" rel="noopener">BscScan</a>
-        <a class="btn" href="https://pancakeswap.finance/swap?outputCurrency=0xF9200177e2e789728F0b989975be8A080dD28fd5" target="_blank" rel="noopener">PancakeSwap</a>
-        <a class="btn" href="https://t.me/SukhramTokenChat" target="_blank" rel="noopener">Telegram</a><br>
-        <code class="contract-box">0xF9200177e2e789728F0b989975be8A080dD28fd5</code>
-      </div>
-
-      <section class="section">
-        <h2>About</h2>
-        <p>SukhramToken (SKM) focuses on accessibility and low fees. Utilities and partnerships will be introduced step by step as the community grows.</p>
-      </section>
-
-      <section class="section">
-        <h2>Tokenomics</h2>
-        <div class="grid">
-          <div class="card"><h3>Total supply</h3><p><strong>Set later</strong></p></div>
-          <div class="card"><h3>Taxes</h3><p>Buy/Sell: <strong>0%</strong></p></div>
-          <div class="card"><h3>Liquidity</h3><p>Main pair: <strong>SKM/WBNB</strong><br>LP lock: <em>add link</em></p></div>
-        </div>
-      </section>
-
-      <section class="section">
-        <h2>Live chart</h2>
-        <div class="iframe-wrap">
-          <iframe src="https://dexscreener.com/bsc/0xF9200177e2e789728F0b989975be8A080dD28fd5" title="DexScreener"></iframe>
-        </div>
-      </section>
-    </section>
-
-    <!-- RU -->
-    <section class="lang lang-ru hidden">
-      <div class="hero">
-        <h2>SukhramToken <span class="lead">(SKM)</span></h2>
-        <p class="lead">BEP-20 токен в сети BNB Smart Chain. Прозрачность и фокус на сообщество.</p>
-        <a class="btn primary" id="copy-ru">Скопировать адрес контракта</a>
-        <a class="btn" href="https://bscscan.com/token/0xF9200177e2e789728F0b989975be8A080dD28fd5" target="_blank" rel="noopener">BscScan</a>
-        <a class="btn" href="https://pancakeswap.finance/swap?outputCurrency=0xF9200177e2e789728F0b989975be8A080dD28fd5" target="_blank" rel="noopener">PancakeSwap</a>
-        <a class="btn" href="https://t.me/SukhramTokenChat" target="_blank" rel="noopener">Telegram</a><br>
-        <code class="contract-box">0xF9200177e2e789728F0b989975be8A080dD28fd5</code>
-      </div>
-
-      <section class="section">
-        <h2>О проекте</h2>
-        <p>SukhramToken (SKM) — доступность и низкие комиссии. Утилити и партнёрства подключаются по мере роста комьюнити.</p>
-      </section>
-
-      <section class="section">
-        <h2>График</h2>
-        <div class="iframe-wrap"><iframe src="https://dexscreener.com/bsc/0xF9200177e2e789728F0b989975be8A080dD28fd5" title="DexScreener"></iframe></div>
-      </section>
-    </section>
-
-    <!-- AR -->
-    <section class="lang lang-ar hidden" dir="rtl">
-      <div class="hero">
-        <h2>SukhramToken <span class="lead">(SKM)</span></h2>
-        <p class="lead">رمز BEP-20 على شبكة BNB مع تركيز على المجتمع وشفافية كاملة.</p>
-        <a class="btn primary" id="copy-ar">نسخ عنوان العقد</a>
-        <a class="btn" href="https://bscscan.com/token/0xF9200177e2e789728F0b989975be8A080dD28fd5" target="_blank" rel="noopener">BscScan</a>
-        <a class="btn" href="https://pancakeswap.finance/swap?outputCurrency=0xF9200177e2e789728F0b989975be8A080dD28fd5" target="_blank" rel="noopener">PancakeSwap</a>
-        <a class="btn" href="https://t.me/SukhramTokenChat" target="_blank" rel="noopener">Telegram</a><br>
-        <code class="contract-box">0xF9200177e2e789728F0b989975be8A080dD28fd5</code>
-      </div>
-
-      <section class="section">
-        <h2>حول المشروع</h2>
-        <p>SukhramToken (SKM) يركز على سهولة الاستخدام والرسوم المنخفضة. سيتم إطلاق الفوائد والشراكات تدريجياً مع نمو المجتمع.</p>
-      </section>
-
-      <section class="section">
-        <h2>الرسم البياني المباشر</h2>
-        <div class="iframe-wrap"><iframe src="https://dexscreener.com/bsc/0xF9200177e2e789728F0b989975be8A080dD28fd5" title="DexScreener"></iframe></div>
-      </section>
-    </section>
-  </main>
-
-  <footer class="container footer">
-    <p>© <span id="year"></span> SukhramToken</p>
-  </footer>
-
-  <script>
-    document.getElementById('year').textContent=new Date().getFullYear();
-
-    const btns=document.querySelectorAll('.langs button');
-    const sections=document.querySelectorAll('.lang');
-    btns.forEach(b=>b.addEventListener('click',()=>{
-      btns.forEach(x=>x.classList.remove('active')); b.classList.add('active');
-      sections.forEach(s=>s.classList.add('hidden'));
-      document.querySelector('.lang-'+b.dataset.lang).classList.remove('hidden');
-      document.documentElement.dir=(b.dataset.lang==='ar')?'rtl':'ltr';
-    }));
-
-    function attach(id){
-      const el=document.getElementById(id);
-      if(el) el.onclick=()=>navigator.clipboard.writeText('0xF9200177e2e789728F0b989975be8A080dD28fd5')
-        .then(()=>alert('Copied! / Скопировано! / تم النسخ!'));
-    }
-    attach('copy-en'); attach('copy-ru'); attach('copy-ar');
-  </script>
-</body>
-</html>
+  /* 🔹 КРУПНАЯ ЭМБЛЕМА НА ГЛАВНОЙ */
+  .logo-center{display:flex;align-items:center;justify-content:center;gap:16px;margin:20px 0}
+  .logo-center img{
+    width:120px;
+    height:120px;
+    border-radius:50%;
+    border:2px solid var(--accent);
+    transform: scale(1.22);              /* 🔹 увеличивает картинку внутри круга */
+    transform-origin: center;
+    clip-path: circle(50% at 50% 50%);
+  }
+  .logo-center h1{margin:0;color:#7a5a00}
+</style>
