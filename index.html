@@ -41,25 +41,20 @@
     .brand{display:flex;align-items:center;gap:12px;text-decoration:none;font-weight:800;color:var(--text)}
     .brand span{font-size:22px}
 
-    /* ЛОГО В ШАПКЕ (обёртка + изображение внутри) */
+    /* ЛОГО В ШАПКЕ */
     .brand-logo{
-      width:64px; height:64px;               /* увеличил немного */
+      width:56px; height:56px;
       border-radius:50%;
       overflow:hidden;
       border:2px solid var(--accent);
       box-shadow:0 0 0 2px rgba(0,0,0,.06);
       display:inline-block;
-      background:linear-gradient(180deg,#fff,#fff6da);
     }
     .brand-logo img{
-      width:160%; height:160%;
+      width:150%; height:150%;
       object-fit:contain;
-      /* object-position позволяет точнее центрировать — меняйте цифры при необходимости */
-      object-position: 20% 30%;
-      transform: none;
+      transform:translate(-25%, -25%);
       display:block;
-      pointer-events:none;
-      user-select:none;
     }
 
     .langs{display:flex;gap:8px;flex-wrap:wrap}
@@ -91,35 +86,45 @@
     .hidden{display:none}
     [dir="rtl"] .langs button{margin-left:0;margin-right:8px}
 
-    /* БОЛЬШАЯ ЭМБЛЕМА ВВЕРХУ (обёртка + image увеличен внутри) */
-    .logo-center{display:flex;align-items:center;justify-content:center;gap:16px;margin:20px 0}
+    /* БОЛЬШАЯ ЭМБЛЕМА ВВЕРХУ */
+    .logo-center{
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      gap:16px;
+      margin:25px 0;
+    }
     .logo-center .logo-wrap{
-      width:140px; height:140px;               /* сделал чуть больше */
+      width:110px; height:110px;
       border-radius:50%;
       overflow:hidden;
-      border:4px solid rgba(255,210,77,.9);
+      border:2px solid var(--accent);
       display:inline-block;
       background:linear-gradient(180deg,#fff,#fff7df);
-      box-shadow: 0 8px 20px rgba(0,0,0,.08);
+      box-shadow:0 0 6px rgba(0,0,0,0.08);
     }
     .logo-center .logo-wrap img{
-      width:170%; height:170%;
+      width:135%; height:135%;
       object-fit:contain;
-      /* object-position — смещает сам рисунок внутри круга, подправляет центр */
-      object-position: 22% 24%;
+      transform:translate(-15%, -15%);
       display:block;
-      pointer-events:none;
-      user-select:none;
     }
-    .logo-center h1{margin:0;color:#7a5a00;font-size:36px}
-    @media (max-width:640px){ .logo-center h1{font-size:28px} .logo-center{gap:12px} }
+    .logo-center h1{
+      margin:0;
+      color:#7a5a00;
+      font-size:36px;
+    }
+    @media (max-width:640px){
+      .logo-center h1{font-size:28px}
+      .logo-center{gap:12px}
+    }
   </style>
 </head>
 <body>
   <!-- Шапка -->
   <header class="nav container">
     <a class="brand" href="#top" aria-label="SukhramToken">
-      <span class="brand-logo"><img loading="lazy" src="logo_sukhram_300.png" alt="SukhramToken"></span>
+      <span class="brand-logo"><img src="logo_sukhram_300.png" alt="SukhramToken"></span>
       <span>SukhramToken</span>
     </a>
     <div class="langs">
@@ -131,7 +136,7 @@
 
   <!-- Крупная эмблема -->
   <div class="logo-center container">
-    <span class="logo-wrap"><img loading="lazy" src="logo_sukhram_300.png" alt="SukhramToken Logo"></span>
+    <span class="logo-wrap"><img src="logo_sukhram_300.png" alt="SukhramToken Logo"></span>
     <h1>SukhramToken (SKM)</h1>
   </div>
 
@@ -147,102 +152,7 @@
         <a class="btn" href="https://t.me/SukhramTokenChat" target="_blank" rel="noopener">Telegram</a><br>
         <code class="contract-box">0xF9200177e2e789728F0b989975be8A080dD28fd5</code>
       </div>
-
-      <section class="section">
-        <h2>About</h2>
-        <p>SukhramToken (SKM) focuses on accessibility and low fees. Utilities and partnerships will be introduced step by step as the community grows.</p>
-      </section>
-
-      <section class="section">
-        <h2>Tokenomics</h2>
-        <div class="grid">
-          <div class="card"><h3>Total supply</h3><p><strong>Set later</strong></p></div>
-          <div class="card"><h3>Taxes</h3><p>Buy/Sell: <strong>0%</strong></p></div>
-          <div class="card"><h3>Liquidity</h3><p>Main pair: <strong>SKM/WBNB</strong><br>LP lock: <em>add link</em></p></div>
-        </div>
-      </section>
-
-      <section class="section">
-        <h2>Live chart</h2>
-        <div class="iframe-wrap">
-          <iframe src="https://dexscreener.com/bsc/0xF9200177e2e789728F0b989975be8A080dD28fd5" title="DexScreener"></iframe>
-        </div>
-      </section>
-    </section>
-
-    <!-- RU -->
-    <section class="lang lang-ru hidden">
-      <div class="hero">
-        <h2>SukhramToken <span class="lead">(SKM)</span></h2>
-        <p class="lead">BEP-20 токен в сети BNB Smart Chain. Прозрачность и фокус на сообщество.</p>
-        <a class="btn primary" id="copy-ru">Скопировать адрес контракта</a>
-        <a class="btn" href="https://bscscan.com/token/0xF9200177e2e789728F0b989975be8A080dD28fd5" target="_blank" rel="noopener">BscScan</a>
-        <a class="btn" href="https://pancakeswap.finance/swap?outputCurrency=0xF9200177e2e789728F0b989975be8A080dD28fd5" target="_blank" rel="noopener">PancakeSwap</a>
-        <a class="btn" href="https://t.me/SukhramTokenChat" target="_blank" rel="noopener">Telegram</a><br>
-        <code class="contract-box">0xF9200177e2e789728F0b989975be8A080dD28fd5</code>
-      </div>
-
-      <section class="section">
-        <h2>О проекте</h2>
-        <p>SukhramToken (SKM) — доступность и низкие комиссии. Утилити и партнёрства подключаются по мере роста комьюнити.</p>
-      </section>
-
-      <section class="section">
-        <h2>График</h2>
-        <div class="iframe-wrap"><iframe src="https://dexscreener.com/bsc/0xF9200177e2e789728F0b989975be8A080dD28fd5" title="DexScreener"></iframe></div>
-      </section>
-    </section>
-
-    <!-- AR -->
-    <section class="lang lang-ar hidden" dir="rtl">
-      <div class="hero">
-        <h2>SukhramToken <span class="lead">(SKM)</span></h2>
-        <p class="lead">رمز BEP-20 على شبكة BNB مع تركيز على المجتمع وشفافية كاملة.</p>
-        <a class="btn primary" id="copy-ar">نسخ عنوان العقد</a>
-        <a class="btn" href="https://bscscan.com/token/0xF9200177e2e789728F0b989975be8A080dD28fd5" target="_blank" rel="noopener">BscScan</a>
-        <a class="btn" href="https://pancakeswap.finance/swap?outputCurrency=0xF9200177e2e789728F0b989975be8A080dD28fd5" target="_blank" rel="noopener">PancakeSwap</a>
-        <a class="btn" href="https://t.me/SukhramTokenChat" target="_blank" rel="noopener">Telegram</a><br>
-        <code class="contract-box">0xF9200177e2e789728F0b989975be8A080dD28fd5</code>
-      </div>
-
-      <section class="section">
-        <h2>حول المشروع</h2>
-        <p>SukhramToken (SKM) يركز على سهولة الاستخدام والرسوم المنخفضة. سيتم إطلاق الفوائد والشراكات تدريجياً مع نمو المجتمع.</p>
-      </section>
-
-      <section class="section">
-        <h2>الرسم البياني المباشر</h2>
-        <div class="iframe-wrap"><iframe src="https://dexscreener.com/bsc/0xF9200177e2e789728F0b989975be8A080dD28fd5" title="DexScreener"></iframe></div>
-      </section>
     </section>
   </main>
-
-  <footer class="container footer">
-    <p>© <span id="year"></span> SukhramToken</p>
-  </footer>
-
-  <script>
-    document.getElementById('year').textContent=new Date().getFullYear();
-
-    const btns=document.querySelectorAll('.langs button');
-    const sections=document.querySelectorAll('.lang');
-    btns.forEach(b=>{
-      b.addEventListener('click',()=>{
-        btns.forEach(x=>x.classList.remove('active'));
-        b.classList.add('active');
-        sections.forEach(s=>s.classList.add('hidden'));
-        const sel = document.querySelector('.lang-'+b.dataset.lang);
-        if(sel) sel.classList.remove('hidden');
-        document.documentElement.dir=(b.dataset.lang==='ar')?'rtl':'ltr';
-      });
-    });
-
-    function attach(id){
-      const el=document.getElementById(id);
-      if(el) el.onclick=()=>navigator.clipboard.writeText('0xF9200177e2e789728F0b989975be8A080dD28fd5')
-        .then(()=>alert('Copied! / Скопировано! / تم النسخ!'));
-    }
-    attach('copy-en'); attach('copy-ru'); attach('copy-ar');
-  </script>
 </body>
 </html>
